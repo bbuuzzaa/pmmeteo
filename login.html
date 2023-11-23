@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.html">
+    <style>
+        /* Váš CSS zde */
+    </style>
+    <script>
+        function loadLogin() {
+            var registeredUsername = localStorage.getItem("registeredUsername");
+            var registeredPassword = localStorage.getItem("registeredPassword");
+            var rememberMeCheckbox = document.getElementById("rememberMeCheckbox");
+
+            if (rememberMeCheckbox.checked && registeredUsername && registeredPassword) {
+                document.querySelector('input[name="username"]').value = registeredUsername;
+                document.querySelector('input[name="password"]').value = registeredPassword;
+            }
+        }
+
+        function saveLogin() {
+            var username = document.querySelector('input[name="username"]').value;
+            var password = document.querySelector('input[name="password"]').value;
+            var registeredUsername = localStorage.getItem("registeredUsername");
+            var registeredPassword = localStorage.getItem("registeredPassword");
+
+            if (username === registeredUsername && password === registeredPassword) {
+                localStorage.setItem("isLoggedIn", "true");
+                window.location.href = "hlavnastranka.html";
+                return false;
+            } else {
+                alert("Invalid username or password. Please try again.");
+                return false;
+            }
+        }
+
+        function goToForgotPassword() {
+            window.location.href = "forgot.html";
+        }
+    </script>
+</head>
+
+<body onload="loadLogin()">
+    <div class="wrapper">
+        <form onsubmit="return saveLogin();">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox" id="rememberMeCheckbox" onchange="loadLogin()"> Remember me </label>
+                <a href="javascript:void(0);" onclick="goToForgotPassword()"> Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

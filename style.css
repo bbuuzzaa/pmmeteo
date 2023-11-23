@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fa9428;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    /* Použijeme Flexbox */
+    justify-content: space-between;
+    /* Zarovnanie na pravo */
+    align-items: center;
+    /* Zarovnanie vertikálne na strede */
+}
+header h1{
+    margin-left: 60px;
+}
+header p {
+    margin: 0;
+    padding: 5px 15px;
+    border: solid 2px #ffffff;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    background: #ffffff;
+    font-size: 19px;
+
+}
+
+header a {
+    color: orange;
+    text-decoration: none;
+}
+
+main {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.orange-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    margin-left: 8px; /* Přidáme mezeru mezi tlačítky */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.button {
+    text-align: right; /* Zarovnání tlačítek napravo */
+}
+
+.white-button {
+    background-color: rgb(255, 255, 255);
+    color: orange;
+    border: none;
+    padding: 7px 15px;
+    margin-left: 8px; /* Přidáme mezeru mezi tlačítky */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
