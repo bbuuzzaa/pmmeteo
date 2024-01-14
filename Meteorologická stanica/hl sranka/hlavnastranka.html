@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Meteorologická Stanica</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Meteorologická Stanica</h1>
+        <div class="header-buttons">
+            <a href="login.html"><button class="white-button" id="signupButton">Log out</button></a>
+        </div>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+
+    <main>
+        <section class="data">
+            <h2>Aktuálne údaje</h2>
+            <div class="button">
+                <button id="showTemperature" class="orange-button">Teplota</button>
+                <button id="showHumidity" class="orange-button">Vlhkosť</button>
+                <button id="showAmoniak" class="orange-button">Amoniak</button>
+                <button id="showBenzen" class="orange-button">Benzen</button>
+            </div>
+           
+           
+            <p>Teplota: <span id="temperature"></span></p>
+            <p>Vlhkosť: <span id="humidity"></span></p>
+            <p>Amoniak: <span id="amonium"></span></p>
+            <p>Benzén: <span id="benzen"></span></p>
+            <div class="graf"> <h3>Nezobrazuje sa graf?</h3>
+                <section class="data">
+           
+                    <div class="button">
+                     <a href="https://ballekpatrik.grafana.net/public-dashboards/fd97eacbcda446be9da51b02f5ea26c5"><button id="showTemperature" class="orange-button">Graf</button></a>
+                    
+                    </div> 
+            </div>
+            <canvas id="dataChart" width="400" height="200"></canvas>
+            
+        
+        </section>
+      
+    </main>
+
+    <footer>
+        &copy; 2023 Tvrdošín
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
