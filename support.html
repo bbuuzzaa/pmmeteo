@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Support - Meteorologická Stanica</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Váš CSS kód */
+
+        /* Upravenie vzhľadu polí pre email a správu */
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #fa9428;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f58020;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <header>
+        <h1>Meteorologická Stanica</h1>
+        <div class="header-buttons">
+            <a href="login.html"><button class="white-button" id="signupButton">Log in</button></a>
+            <a href="register.html"><button class="white-button" id="signinButton">Sign up</button></a>
+        </div>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="hlavnastranka.html">Home</a>
+        <a href="support.html">Support</a>
+        
+        <a href="contact.html">Contact</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; </button>
+      </div>
+  
+    <main>
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+            <h2>Support</h2>
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" placeholder="Email id" required>
+                <label for="message">Your Message:</label><br>
+                <textarea id="message"  rows="6"  placeholder="How can we help you?"></textarea><br><br>
+                <button type="submit">Send</button>
+               
+            </form>
+        </div>
+    
+
+    
+
+
+<script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+    <script>
+        function sendEmail(){ 
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "holubn3@gmail.com",
+    Password : "bd8pt2mn7",
+    To : 'matusfrtalaps4@gmail.com',
+    From : document.getElementById("email"). value,
+    Subject : "Support",
+    Body : "email: " + document.getElementById("name"). value
+    + "<br> message: " + document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+        }
+    </script>
+    </main>
+</body>
+
+</html>
+<footer>
+        &copy; 2023 Tvrdošín
+    </footer>
