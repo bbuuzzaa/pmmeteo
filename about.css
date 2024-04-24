@@ -1,0 +1,53 @@
+/* Štýly pre obrazky */
+.left-image
+ {
+  width: 200px; /* Nastavte šírku podľa potreby */
+  height: 200px; /* Nastavte výšku podľa potreby */
+  border-radius: 50%; /* Vytvorí kruhový tvar */
+  margin: 55px; /* Medzera medzi obrazkami */
+ margin-left: 80px;
+}
+.right-image{ 
+  width: 200px; /* Nastavte šírku podľa potreby */
+  height: 200px; /* Nastavte výšku podľa potreby */
+  border-radius: 50%; /* Vytvorí kruhový tvar */
+  margin: 55px; /* Medzera medzi obrazkami */
+ margin-right: 80px;
+ 
+}
+.left-image {
+    float: left; /* Zarovnanie nalavo */
+}
+
+.right-image {
+    float: right; /* Zarovnanie napravo */
+}
+
+
+.left-container  {
+  float: left; /* Umístění nalevo */
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+
+}
+.right-container{
+  float: right ; /* Umístění nalevo */
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.about-section{
+  text-align: center;
+ font-size: 18px;
+  
+}
+.right-container .p {
+margin-right: 50px;
+}
+footer{
+  margin-top: 170px;
+}
+body{
+  color: white;
+}
